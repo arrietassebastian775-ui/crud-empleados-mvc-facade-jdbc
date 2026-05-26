@@ -18,7 +18,7 @@
 	 la vista serian los archivos JSP
 	 y el controlador son los servlets -->
 	 
-	 <!-- Conjuntamente con el patron MVC se utiliza el patron de diseño facade, que es un patron que 
+	 <!-- Conjuntamente con el patron MVC se utiliza el patron de diseño facade, que es un patron que
 	 divide al proyecto en capas, que pueden facilmente sustituibles, y que cada capa oculta a la 
 	 anterior las complejidades de dicha implementacion
 	 
@@ -31,8 +31,12 @@
 	 4- Capa de implementacion
 	 5- Capa model
 	 6- etc -->
-	 
+		 
 	<h1>Bienvenido a la aplicación de gestión de empleados</h1>
-	<p>Utiliza el menú para navegar por las diferentes funcionalidades.</p>
+	
+	<div>
+		<a href="MainController">Mostrar listado de empleados</a>
+	</div>
+	
 </body>
 </html>
