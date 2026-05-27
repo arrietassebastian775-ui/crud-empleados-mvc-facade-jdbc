@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.logging.Logger;
 
-public class DBconexion {
+public class DBconexion implements AutoCloseable {
 	
 	private String username;
 	private String password;
@@ -41,6 +41,12 @@ public class DBconexion {
 		}
 		
 		return this.connection;
+	}
+
+	@Override
+	public void close() throws Exception {
+		this.connection.close();
+		
 	}
 
 }
