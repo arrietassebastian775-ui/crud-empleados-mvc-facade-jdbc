@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
+<body> 
+
 	<!-- El patron de diseño MVC (Modelo-Vista-Controlador) es una arquitectura 
 	de software que separa una aplicación en tres componentes principales: el Modelo,
 	 la Vista y el Controlador. Esta separación permite una mejor organización 
@@ -29,7 +30,7 @@
 	 2- Capa de servivios
 	 3- Capa de los controladores, que pueden haber varios
 	 4- Capa de implementacion
-	 5- Capa model
+	 5- Capa model 
 	 6- etc -->
 		 
 	<h1>Bienvenido a la aplicación de gestión de empleados</h1>

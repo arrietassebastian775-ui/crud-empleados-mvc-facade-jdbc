@@ -1,8 +1,10 @@
 package com.example.controllers;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.logging.Logger;
 
+import com.example.models.Empleado;
 import com.example.services.EmpleadoService;
 import com.example.services.EmpleadoServiceImpl;
 
@@ -33,22 +35,18 @@ public class MainController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		// Conectar con la cpa de servicios
 		
 		EmpleadoService empleadoService = new EmpleadoServiceImpl();
 		
-		boolean connectionResult = false;
+		List<Empleado> empleados = empleadoService.getEmpleados();
 		
-		try {
-			connectionResult = empleadoService.isConnectionOK();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		// El listado de empleados hay que enviarlo como atributo a la vista 
+		// Para que sea renderizada
+		request.setAttribute("empleados", empleados);
 		
-		if (connectionResult)
-			LOG.info("Conexion a la base de datos establecida con exito");
-		else
-			LOG.info("Error al establecer la conexion a la base de datos");
+		request.getRequestDispatcher("views/listadoEmpleados.jsp").forward(request, response);
+		
 		
 	}
 
